@@ -43,6 +43,25 @@ namespace PlanovacTridy
 
         }
 
+        public void Smaz(int index)
+        {
+
+            udalosti[index] = null;
+            for (int i = 0; i < Pocet - 1; i++)
+            {
+
+                if ((udalosti[i + 1] != null) && (udalosti[i] == null))
+                {
+                    udalosti[i] = udalosti[i + 1];
+                    udalosti[i + 1] = null;
+
+                }
+            }
+            Array.Resize(ref udalosti, Pocet - 1);
+            
+
+        }
+
     }
 
 }

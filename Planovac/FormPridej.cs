@@ -45,17 +45,35 @@ namespace Planovac
 
         private void Pridat(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(tbNazev.Text) && !String.IsNullOrEmpty(tbMisto.Text) && !String.IsNullOrEmpty(tbDatum.Text))
+            if (!String.IsNullOrEmpty(tbNazev.Text) && !String.IsNullOrEmpty(tbMisto.Text) )
             {
-                string nazev = tbNazev.Text;
-                string misto = tbMisto.Text;
-                string datum = tbDatum.Text;
-                Priorita pr = (Priorita)cbPriorita.SelectedItem;
+                if(String.IsNullOrEmpty(tbPznm.Text))
+                {
+
+                    string nazev = tbNazev.Text;
+                    string misto = tbMisto.Text;
+                    DateTime datum = dtPicker.Value;
+                    Priorita pr = (Priorita)cbPriorita.SelectedItem;
+                    string pznm = tbPznm.Text;
+                    pznm += "prázdná poznámka";
+
+                    Udalost u = new Udalost(nazev, datum, misto, pr, pznm);
+                    Form1.zaznamZ.Pridej(u);
+                }     else
+                {
+
+                    string nazev = tbNazev.Text;
+                    string misto = tbMisto.Text;
+                    DateTime datum = dtPicker.Value;
+                    Priorita pr = (Priorita)cbPriorita.SelectedItem;
+                    string pznm = tbPznm.Text;
+
+                    Udalost u = new Udalost(nazev, datum, misto, pr, pznm);
+                    Form1.zaznamZ.Pridej(u);
+                }
 
 
-                Udalost u = new Udalost(nazev, misto, datum, pr);
-
-                Form1.zaznamZ.Pridej(u);
+               
                 Close();
 
                 //ChampionsLeagueForm.playerR.players[index] = p;
@@ -72,6 +90,11 @@ namespace Planovac
         private void Zrus(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

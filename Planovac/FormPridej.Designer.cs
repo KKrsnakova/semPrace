@@ -34,12 +34,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbNazev = new System.Windows.Forms.TextBox();
-            this.tbDatum = new System.Windows.Forms.TextBox();
             this.tbMisto = new System.Windows.Forms.TextBox();
             this.cbPriorita = new System.Windows.Forms.ComboBox();
             this.btnPridej = new System.Windows.Forms.Button();
             this.btnZrus = new System.Windows.Forms.Button();
             this.lbkl = new System.Windows.Forms.Label();
+            this.dtPicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbPznm = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -90,41 +92,33 @@
             // tbNazev
             // 
             this.tbNazev.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.tbNazev.Location = new System.Drawing.Point(93, 61);
+            this.tbNazev.Location = new System.Drawing.Point(124, 61);
             this.tbNazev.Name = "tbNazev";
-            this.tbNazev.Size = new System.Drawing.Size(237, 34);
+            this.tbNazev.Size = new System.Drawing.Size(293, 34);
             this.tbNazev.TabIndex = 4;
-            // 
-            // tbDatum
-            // 
-            this.tbDatum.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.tbDatum.Location = new System.Drawing.Point(93, 106);
-            this.tbDatum.Name = "tbDatum";
-            this.tbDatum.Size = new System.Drawing.Size(237, 34);
-            this.tbDatum.TabIndex = 5;
             // 
             // tbMisto
             // 
             this.tbMisto.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.tbMisto.Location = new System.Drawing.Point(93, 150);
+            this.tbMisto.Location = new System.Drawing.Point(124, 150);
             this.tbMisto.Name = "tbMisto";
-            this.tbMisto.Size = new System.Drawing.Size(237, 34);
+            this.tbMisto.Size = new System.Drawing.Size(293, 34);
             this.tbMisto.TabIndex = 6;
             // 
             // cbPriorita
             // 
             this.cbPriorita.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
             this.cbPriorita.FormattingEnabled = true;
-            this.cbPriorita.Location = new System.Drawing.Point(93, 194);
+            this.cbPriorita.Location = new System.Drawing.Point(124, 194);
             this.cbPriorita.Name = "cbPriorita";
-            this.cbPriorita.Size = new System.Drawing.Size(237, 34);
+            this.cbPriorita.Size = new System.Drawing.Size(293, 34);
             this.cbPriorita.TabIndex = 8;
             // 
             // btnPridej
             // 
             this.btnPridej.BackColor = System.Drawing.Color.White;
             this.btnPridej.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnPridej.Location = new System.Drawing.Point(213, 292);
+            this.btnPridej.Location = new System.Drawing.Point(252, 345);
             this.btnPridej.Name = "btnPridej";
             this.btnPridej.Size = new System.Drawing.Size(94, 37);
             this.btnPridej.TabIndex = 9;
@@ -136,7 +130,7 @@
             // 
             this.btnZrus.BackColor = System.Drawing.Color.White;
             this.btnZrus.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnZrus.Location = new System.Drawing.Point(43, 292);
+            this.btnZrus.Location = new System.Drawing.Point(84, 345);
             this.btnZrus.Name = "btnZrus";
             this.btnZrus.Size = new System.Drawing.Size(94, 37);
             this.btnZrus.TabIndex = 10;
@@ -150,25 +144,60 @@
             this.lbkl.BackColor = System.Drawing.Color.Transparent;
             this.lbkl.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbkl.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbkl.Location = new System.Drawing.Point(85, 9);
+            this.lbkl.Location = new System.Drawing.Point(106, 9);
             this.lbkl.Name = "lbkl";
             this.lbkl.Size = new System.Drawing.Size(196, 47);
             this.lbkl.TabIndex = 11;
             this.lbkl.Text = "Nová událost";
             this.lbkl.Click += new System.EventHandler(this.label5_Click);
             // 
+            // dtPicker
+            // 
+            this.dtPicker.AllowDrop = true;
+            this.dtPicker.CustomFormat = "dd-MM-yyyy";
+            this.dtPicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtPicker.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dtPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPicker.Location = new System.Drawing.Point(124, 107);
+            this.dtPicker.Name = "dtPicker";
+            this.dtPicker.Size = new System.Drawing.Size(293, 34);
+            this.dtPicker.TabIndex = 12;
+            this.dtPicker.Value = new System.DateTime(2022, 3, 29, 0, 0, 0, 0);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(12, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 26);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Poznámka:";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            // 
+            // tbPznm
+            // 
+            this.tbPznm.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tbPznm.Location = new System.Drawing.Point(124, 238);
+            this.tbPznm.Name = "tbPznm";
+            this.tbPznm.Size = new System.Drawing.Size(293, 34);
+            this.tbPznm.TabIndex = 14;
+            // 
             // FormPridej
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Planovac.Properties.Resources.floral_wallpaper;
-            this.ClientSize = new System.Drawing.Size(342, 351);
+            this.ClientSize = new System.Drawing.Size(429, 418);
+            this.Controls.Add(this.tbPznm);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dtPicker);
             this.Controls.Add(this.lbkl);
             this.Controls.Add(this.btnZrus);
             this.Controls.Add(this.btnPridej);
             this.Controls.Add(this.cbPriorita);
             this.Controls.Add(this.tbMisto);
-            this.Controls.Add(this.tbDatum);
             this.Controls.Add(this.tbNazev);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -190,11 +219,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbNazev;
-        private System.Windows.Forms.TextBox tbDatum;
         private System.Windows.Forms.TextBox tbMisto;
         private System.Windows.Forms.ComboBox cbPriorita;
         private System.Windows.Forms.Button btnPridej;
         private System.Windows.Forms.Button btnZrus;
         private System.Windows.Forms.Label lbkl;
+        private System.Windows.Forms.DateTimePicker dtPicker;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbPznm;
     }
 }

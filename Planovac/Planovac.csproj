@@ -52,12 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPoznamka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPoznamka.Designer.cs">
+      <DependentUpon>FormPoznamka.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPridej.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPridej.Designer.cs">
       <DependentUpon>FormPridej.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misto.cs" />
     <Compile Include="Priorita.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +72,9 @@
     <Compile Include="Zaznamy.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPoznamka.resx">
+      <DependentUpon>FormPoznamka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPridej.resx">
       <DependentUpon>FormPridej.cs</DependentUpon>
@@ -94,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\floral-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
